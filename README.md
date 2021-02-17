@@ -1,4 +1,4 @@
-# giphy
+# GIPHY
 
 
 GIPHY API: 

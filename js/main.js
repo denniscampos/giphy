@@ -4,17 +4,20 @@ document.querySelector('button').addEventListener('click', searchGif)
 let apikey = "fh8I5dCtn7xLf12u66wIvajesdm5VXOz"
 let urlTrend = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}`
 
-            fetch(urlTrend)
-                .then(res => res.json())
-                .then(trending => {
-                    console.log(trending.data)
+        fetch(urlTrend)
+            .then(res => res.json())
+            .then(trending => {
+                console.log(trending.data)
 
-                    document.querySelector('.trending').src = trending.data[0].images.downsized.url
+                for(let i = 0; i < 10; i++) {
+                    document.querySelector('.img-div').innerHTML += `<img src="${trending.data[i].images.downsized.url}">`
+                 }
                     
-                })
-                .catch(err => {
-                    console.log(`error ${err}`)
-                })
+
+            })
+            .catch(err => {
+                  console.log(`error ${err}`)
+            })
 
 
 

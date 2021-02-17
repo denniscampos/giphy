@@ -1,6 +1,38 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 body {
     background: rgb(18, 18, 18);
     color: white;
 }
+
+.img-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    /* flex-grow: 1; */
+    /* width: 100px;
+    height: 200px; */
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+input {
+    
+    height: 30px;
+}
+
+button {
+    border-radius: 5px;
+    height: 30px;
+}
+
+
 
